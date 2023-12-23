@@ -10,9 +10,17 @@
     <title>Noel 2023!</title>
 </head>
 <body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    var audio = new Audio('song/background.mp3');
+    document.body.addEventListener('click', function () {
+        audio.play();
+    });
+});
+    </script>
     <div class="container">
         <audio autoplay loop>
-            <source src="song/background.mp3" type="audio/mp3">
+            <source src="song/nhac-background.mp3" type="audio/mp3">
         </audio>
         <div class="bgr-container">
             <div class="box-bgr">
