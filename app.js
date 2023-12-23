@@ -13,3 +13,36 @@ content.onclick = function(){
 Close.onclick = function(){
     boxContent.classList.remove('active')
 }
+
+
+ddocument.addEventListener('DOMContentLoaded', function () {
+    function typeWriter(textElement, speed) {
+        const text = textElement.textContent;
+        textElement.innerHTML = ''; // Clear original text
+        let i = 0;
+
+        function type() {
+            if (i < text.length) {
+                const span = document.createElement('span');
+                span.textContent = text[i];
+                textElement.appendChild(span);
+                i++;
+                setTimeout(type, speed);
+            }
+        }
+
+        type();
+    }
+
+    // Set the speed (adjust as needed)
+    const speed = 100;
+
+    // Target elements by their IDs and apply the typewriter effect
+    typeWriter(document.getElementById('text1'), speed);
+    typeWriter(document.getElementById('text2'), speed);
+    typeWriter(document.getElementById('text3'), speed);
+});
+
+
+
+

@@ -10,10 +10,49 @@
     <title>Noel 2023!</title>
 </head>
 <body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    var audio = new Audio('song/background.mp3');
+    document.body.addEventListener('click', function () {
+        audio.play();
+    });
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+function typeWriter(textElement, speed) {
+const text = textElement.textContent;
+textElement.innerHTML = ''; // Clear original text
+let i = 0;
+
+function type() {
+    if (i < text.length) {
+        const span = document.createElement('span');
+        span.textContent = text[i];
+        textElement.appendChild(span);
+        i++;
+        setTimeout(type, speed);
+    }
+}
+
+type();
+}
+
+// Set the speed (adjust as needed)
+const speed = 100;
+
+// Target elements by their IDs and apply the typewriter effect
+typeWriter(document.getElementById('text1').querySelector('span'), speed);
+typeWriter(document.getElementById('text2').querySelector('span'), speed);
+typeWriter(document.getElementById('text3').querySelector('span'), speed);
+});
+    </script>
+   
     <div class="container">
-        <audio autoplay loop>
+        <!-- <audio autoplay loop>
             <source src="song/background.mp3" type="audio/mp3">
-        </audio>
+        </audio> -->
         <div class="bgr-container">
             <div class="box-bgr">
                 <div class="moon">
@@ -71,12 +110,16 @@
                         <div class="content1">
                             <div class="content-text">
                                 <div class="text1">
-                                    <p id="text1">2023!</p>
+                                    <p id="text1">
+                                        <span>2023!</span>
+                                    </p>
                                 </div>
                                 <div class="text2">
-                                    <h2 id="text2">Chúc mừng Giáng Sinh! Mùa lễ này, hãy bên nhau chia sẻ niềm vui và tình thương. Chúng ta có thể tận hưởng những khoảnh khắc ấm áp và ý nghĩa bên gia đình và bạn bè. Hy vọng rằng mỗi chiếc đèn trang trí và hương thơm của cây thông sẽ mang lại không khí lễ hội, làm cho mỗi khoảnh khắc trở nên đặc biệt.
+                                    <h2 id="text2">
+                                        <span>Chúc mừng Giáng Sinh!.</span>
                                     </h2>
-                                    <h2 id="text3">Chúc bạn và những người yêu quý có một mùa Giáng Sinh tràn ngập tình thương và hạnh phúc. Mời bạn tận hưởng những giây phút ấm áp, để những ước mơ thành sự thật và tình bạn mãi mãi trường tồn. Mừng Giáng Sinh và Chúc năm mới đầy niềm vui và thành công!
+                                    <h2 id="text3">
+                                        <span>Chúc bạn tận hưởng những giây phút ấm áp, để những ước mơ thành sự thật và tình bạn mãi mãi trường tồn. Mừng Giáng Sinh và Chúc năm mới đầy niềm vui và thành công!</span>
                                     </h2>
                                 </div>
                             </div>
