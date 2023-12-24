@@ -721,8 +721,9 @@ section{
     flex-direction: column;
     overflow: hidden;
 }
+
 .text1{
-    width: 100px;
+    width: 257px;
     padding: 5px 5px 0px 5px;
     margin-top: 70px;
     display: flex;
@@ -737,14 +738,16 @@ section{
     font-weight: bold;
 }
 .box-content:hover #text1{
-    animation: contentText 3s forwards;
+    animation: contentText 3s ease-out both;
     animation-delay: 1s;
 }
 @keyframes contentText{
-    0%{
-        transform: translateY(-40px);
+    from{
+        opacity: 0;
+        transform: translateY(-60px);
     }
-    100%{
+    to{
+        opacity: 1;
         transform: translateY(0px);
     }
 }
@@ -764,14 +767,16 @@ section{
     font-family: 'Dancing Script', cursive;
 }
 .box-content:hover #text2{
-    animation: contenttext1 2s ease-in forwards;
+    animation: contenttext1 3s ease-in forwards;
     animation-delay: 2s;
 }
 @keyframes contenttext1{
-    0%{
+    from{
+        opacity: 0;
         transform: translateX(-500px);
     }
-    100%{
+    to{
+        opacity: 1;
         transform: translateX(0px);
     }
 }
@@ -782,14 +787,16 @@ section{
     font-family: 'Dancing Script', cursive;
 }
 .box-content:hover #text3{
-    animation: contenttext2 2s ease-in forwards;
+    animation: contenttext2 5s ease-in forwards;
     animation-delay: 2s;
 }
 @keyframes contenttext2{
-    0%{
+    from{
+        opacity: 0;
         transform: translateX(500px);
     }
-    100%{
+    to{
+        opacity: 1;
         transform: translateX(0px);
     }
 }
